@@ -1,0 +1,96 @@
+# VitalForge README
+
+## Overview  
+VitalForge is a Wear OS and Android companion application for continuous health monitoring, anomaly detection, and data export. It collects vital signs via Samsung Health SDK and Google Health Services, processes data on-device using a TensorFlow Lite autoencoder, and synchronizes readings to a phone app via BLE.
+
+## Features  
+- Continuous heart rate, SpO₂, PPG, and ECG monitoring  
+- On-device anomaly detection with quantized autoencoder  
+- Encrypted local storage of health data (SQLCipher + Android Keystore)  
+- Monthly PDF report generation and secure export  
+- Real-time BLE synchronization to companion Android app  
+- Gamification: goals, badges, and haptic alerts on anomalies  
+- Consent management (health monitoring & telehealth export)  
+- Background data processing & cleanup via WorkManager  
+- Full unit and instrumentation test coverage  
+
+## Getting Started  
+
+### Prerequisites  
+- Android Studio Arctic Fox or later  
+- Wear OS 3+ device or emulator  
+- Companion Android device/emulator with Bluetooth LE support  
+- Samsung Health SDK JARs (included in `app/libs`)  
+- Health Platform API key (set `HEALTH_PLATFORM_API_KEY` in `local.properties`)
+
+### Project Setup  
+1. Clone the repository:  
+git clone https://github.com/your-org/VitalForge.git
+
+
+2. Open in Android Studio.  
+3. Add `local.properties` entries:  
+sdk.dir=/path/to/android/sdk
+HEALTH_PLATFORM_API_KEY=your_api_key_here
+
+
+4. Sync Gradle and build both `:app` and `:companion` modules.  
+
+### Running  
+- Deploy `:app` to Wear OS device/emulator.  
+- Deploy `:companion` to Android phone/emulator.  
+- Grant runtime permissions on watch.  
+- On the companion app, start BLE scan to receive readings.  
+
+## Architecture  
+
+### Modules  
+- **app** (Wear OS Watch)  
+- `data`: Sensor managers, TFLite anomaly detector, repository  
+- `export`: PDF generation and encryption  
+- `ble`: GATT server for BLE sync  
+- `presentation`: Compose UI, navigation, viewmodels  
+- `security`: Keystore management and consent  
+- `work`: Background processing and cleanup  
+
+- **companion** (Phone)  
+- BLE client, local storage, Compose UI  
+
+### Key Technologies  
+- Kotlin, AndroidX, Jetpack Compose  
+- Hilt for dependency injection  
+- Room + SQLCipher for encrypted storage  
+- TensorFlow Lite for on-device ML  
+- Samsung Health SDK & Google Health Services  
+- WorkManager for scheduled tasks  
+- iText for PDF generation  
+- Bluetooth LE for data sync  
+
+## CI/CD  
+- Create GitHub Actions workflows to run:
+- `./gradlew ktlintCheck detekt`
+- `./gradlew test connectedAndroidTest`
+- Build and deploy APKs to internal track  
+
+## Documentation  
+- Generate API docs with Dokka:  
+./gradlew dokkaHtml
+
+- Host on GitHub Pages for easy reference.  
+
+## Clinical Pilot Preparation  
+- Finalize IRB protocols and consent screens.  
+- Provision test devices, onboard ≥20 participants.  
+- Validate against clinical-grade references (MAE ≤2 bpm/2% SpO₂).  
+
+## Production Readiness  
+- Audit security: key rotation, data retention rules.  
+- Optimize battery and performance via profiling.  
+- Submit Wear OS and Companion apps to Play Store.  
+- Integrate Crashlytics and Analytics for post-launch monitoring.  
+
+## Contributing  
+1. Fork and branch from `develop`.  
+2. Adhere to code style (Ktlint, Detekt).  
+3. Write unit and UI tests for new features.  
+4. Submit PRs for review; ensure CI passes.
