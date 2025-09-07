@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.vitalforge.watch.app-debug-65:/xml_file_paths.xml.flat",
+        "source": "com.vitalforge.watch.app-main-67:/xml/file_paths.xml"
+    },
+    {
+        "merged": "com.vitalforge.watch.app-debug-65:/xml_data_extraction_rules.xml.flat",
+        "source": "com.vitalforge.watch.app-main-67:/xml/data_extraction_rules.xml"
+    }
+]

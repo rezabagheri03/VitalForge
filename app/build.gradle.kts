@@ -80,17 +80,18 @@ dependencies {
     implementation("com.google.dagger:hilt-android:2.48.1")
     kapt("com.google.dagger:hilt-compiler:2.48.1")
 
-    // Health Services
-    implementation("androidx.health:health-services-client:1.0.0-alpha13")
+    // Health Services - Updated to stable version
+    implementation("androidx.health:health-services-client:1.0.0-beta03")
 
     // TensorFlow Lite
     implementation("org.tensorflow:tensorflow-lite:2.12.0")
     implementation("org.tensorflow:tensorflow-lite-gpu:2.12.0")
 
-    // Room with SQLCipher
-    implementation("androidx.room:room-runtime:2.6.0")
-    kapt("androidx.room:room-compiler:2.6.0")
-    implementation("net.zetetic:android-database-sqlcipher:4.6.0")
+    // Room with SQLCipher - Updated versions
+    implementation("androidx.room:room-runtime:2.6.1")
+    implementation("androidx.room:room-ktx:2.6.1")
+    kapt("androidx.room:room-compiler:2.6.1")
+    implementation("net.zetetic:android-database-sqlcipher:4.5.4")
 
     // WorkManager
     implementation("androidx.work:work-runtime-ktx:2.8.1")
@@ -106,3 +107,4 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.6")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.6.0")
 }
+
