@@ -1,3 +1,6 @@
+import java.util.Properties
+import java.io.FileInputStream
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -15,8 +18,17 @@ android {
         targetSdk = 34
         versionCode = 1
         versionName = "1.0.0"
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        // Inject API key from local.properties into the manifest
+        manifestPlaceholders["HEALTH_PLATFORM_API_KEY"] = run {
+            val propsFile = rootProject.file("local.properties")
+            if (propsFile.exists()) {
+                Properties().apply {
+                    FileInputStream(propsFile).use { load(it) }
+                }.getProperty("HEALTH_PLATFORM_API_KEY") ?: ""
+            } else ""
+        }
     }
 
     buildTypes {
@@ -80,14 +92,14 @@ dependencies {
     implementation("com.google.dagger:hilt-android:2.48.1")
     kapt("com.google.dagger:hilt-compiler:2.48.1")
 
-    // Health Services - Updated to stable version
+    // Health Services
     implementation("androidx.health:health-services-client:1.0.0-beta03")
 
     // TensorFlow Lite
     implementation("org.tensorflow:tensorflow-lite:2.12.0")
     implementation("org.tensorflow:tensorflow-lite-gpu:2.12.0")
 
-    // Room with SQLCipher - Updated versions
+    // Room with SQLCipher
     implementation("androidx.room:room-runtime:2.6.1")
     implementation("androidx.room:room-ktx:2.6.1")
     kapt("androidx.room:room-compiler:2.6.1")
@@ -107,4 +119,3 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.6")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.6.0")
 }
-

@@ -1,5 +1,9 @@
 [
     {
+        "merged": "com.vitalforge.watch.app-debug-65:/layout_activity_main_wear.xml.flat",
+        "source": "com.vitalforge.watch.app-main-67:/layout/activity_main_wear.xml"
+    },
+    {
         "merged": "com.vitalforge.watch.app-debug-65:/xml_file_paths.xml.flat",
         "source": "com.vitalforge.watch.app-main-67:/xml/file_paths.xml"
     },
