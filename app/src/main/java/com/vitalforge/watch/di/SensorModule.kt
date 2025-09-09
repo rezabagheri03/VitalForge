@@ -1,7 +1,7 @@
 package com.vitalforge.watch.di
 
 import android.content.Context
-import com.vitalforge.watch.data.sensor.SamsungHealthSensorManager
+import com.vitalforge.watch.data.sensor.SimpleHealthSensorManager
 import com.vitalforge.watch.data.health.HealthServicesManager
 import dagger.Module
 import dagger.Provides
@@ -15,8 +15,8 @@ import javax.inject.Singleton
 object SensorModule {
     @Provides
     @Singleton
-    fun provideSamsungHealthSensorManager(@ApplicationContext ctx: Context): SamsungHealthSensorManager =
-        SamsungHealthSensorManager(ctx)
+    fun provideSimpleHealthSensorManager(@ApplicationContext ctx: Context): SimpleHealthSensorManager =
+        SimpleHealthSensorManager(ctx)
 
     @Provides
     @Singleton

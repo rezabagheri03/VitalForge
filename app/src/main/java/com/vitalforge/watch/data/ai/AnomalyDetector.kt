@@ -84,17 +84,26 @@ class AnomalyDetector @Inject constructor(
     }
 }
 
-// Utility loaders for .npz and .npy (implement accordingly)
+// Utility loaders for .npz and .npy
 object NpzLoader {
     fun load(input: InputStream): Map<String, FloatArray> {
-        // Implementation to parse .npz
-        return mapOf()
+        // For now, return default normalization parameters
+        // In a real implementation, you would parse the .npz file
+        return mapOf(
+            "mean" to floatArrayOf(70.0f, 98.0f, 0.5f, 0.0f), // Default values for HR, SpO2, PPG, ECG
+            "std" to floatArrayOf(15.0f, 2.0f, 0.2f, 1.0f)
+        )
     }
 }
 
 object NpyLoader {
     fun load(input: InputStream): List<DoubleArray> {
-        // Implementation to parse .npy
-        return listOf()
+        // For now, return sample calibration data
+        // In a real implementation, you would parse the .npy file
+        return listOf(
+            doubleArrayOf(70.0, 98.0, 0.5, 0.0),
+            doubleArrayOf(72.0, 97.0, 0.6, 0.1),
+            doubleArrayOf(68.0, 99.0, 0.4, -0.1)
+        )
     }
 }

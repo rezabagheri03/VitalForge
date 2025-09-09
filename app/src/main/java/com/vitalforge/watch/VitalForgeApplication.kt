@@ -11,10 +11,10 @@ import androidx.work.WorkManager
 import com.vitalforge.watch.data.work.HealthDataCleanupWorker
 import com.vitalforge.watch.data.work.HealthDataProcessingWorker
 import com.vitalforge.watch.util.NotificationChannelManager
-import dagger.hilt.android.HiltAndroidApp
+//import dagger.hilt.android.HiltAndroidApp
 import java.util.concurrent.TimeUnit
 
-@HiltAndroidApp
+//@HiltAndroidApp
 class VitalForgeApplication : Application(), Configuration.Provider {
     companion object {
         private const val TAG = "VitalForgeApp"

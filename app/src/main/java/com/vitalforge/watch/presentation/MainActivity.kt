@@ -15,7 +15,7 @@ import androidx.lifecycle.lifecycleScope
 import com.vitalforge.watch.presentation.navigation.VitalForgeNavigation
 import com.vitalforge.watch.presentation.theme.VitalForgeTheme
 import com.vitalforge.watch.presentation.viewmodel.MainViewModel
-import dagger.hilt.android.AndroidEntryPoint
+//import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint

@@ -1,0 +1,6 @@
+R_DEF: Internal format may change without notice
+local
+id compose_view_wear
+layout activity_main_wear
+xml data_extraction_rules
+xml file_paths

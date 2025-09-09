@@ -1,7 +1,7 @@
 # VitalForge README
 
 ## Overview  
-VitalForge is a Wear OS and Android companion application for continuous health monitoring, anomaly detection, and data export. It collects vital signs via Samsung Health SDK and Google Health Services, processes data on-device using a TensorFlow Lite autoencoder, and synchronizes readings to a phone app via BLE.
+VitalForge is a Wear OS and Android companion application for continuous health monitoring, anomaly detection, and data export. It collects vital signs via Google Health Services (compatible with Galaxy Watch 4+ and other Wear OS devices), processes data on-device using a TensorFlow Lite autoencoder, and synchronizes readings to a phone app via BLE.
 
 ## Features  
 - Continuous heart rate, SpO₂, PPG, and ECG monitoring  
@@ -18,9 +18,9 @@ VitalForge is a Wear OS and Android companion application for continuous health 
 
 ### Prerequisites  
 - Android Studio Arctic Fox or later  
-- Wear OS 3+ device or emulator  
+- Wear OS 3+ device or emulator (Galaxy Watch 4+ recommended)  
 - Companion Android device/emulator with Bluetooth LE support  
-- Samsung Health SDK JARs (included in `app/libs`)  
+- Google Health Services (automatically available on Wear OS devices)  
 - Health Platform API key (set `HEALTH_PLATFORM_API_KEY` in `local.properties`)
 
 ### Project Setup  
@@ -59,7 +59,7 @@ HEALTH_PLATFORM_API_KEY=your_api_key_here
 - Hilt for dependency injection  
 - Room + SQLCipher for encrypted storage  
 - TensorFlow Lite for on-device ML  
-- Samsung Health SDK & Google Health Services  
+- Google Health Services & Health Connect (Wear OS)  
 - WorkManager for scheduled tasks  
 - iText for PDF generation  
 - Bluetooth LE for data sync  

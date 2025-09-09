@@ -1,16 +1,9 @@
-buildscript {
-    repositories {
-        google()
-        mavenCentral()
-        gradlePluginPortal()
-    }
-    dependencies {
-        classpath("com.android.tools.build:gradle:8.7.2")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.22")
-        classpath("com.google.dagger:hilt-android-gradle-plugin:2.48.1")
-    }
-}
+// No buildscript{} block needed when using pluginManagement{}
 
-tasks.register("clean", Delete::class) {
-    delete(layout.buildDirectory)  // ← Changed from rootProject.buildDir
+// Declare plugin versions for subprojects, but do not apply them here.
+plugins {
+    id("com.android.application") apply false
+    id("org.jetbrains.kotlin.android") apply false
+    kotlin("kapt") apply false
+    id("com.google.dagger.hilt.android") apply false
 }

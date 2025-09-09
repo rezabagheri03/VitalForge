@@ -1,0 +1,191 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.vitalforge.companion"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+9        android:targetSdkVersion="34" />
+10
+11    <uses-permission android:name="android.permission.BLUETOOTH" />
+11-->C:\VitalForge\companion\src\main\AndroidManifest.xml:4:5-68
+11-->C:\VitalForge\companion\src\main\AndroidManifest.xml:4:22-65
+12    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+12-->C:\VitalForge\companion\src\main\AndroidManifest.xml:5:5-74
+12-->C:\VitalForge\companion\src\main\AndroidManifest.xml:5:22-71
+13    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+13-->C:\VitalForge\companion\src\main\AndroidManifest.xml:6:5-76
+13-->C:\VitalForge\companion\src\main\AndroidManifest.xml:6:22-73
+14    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+14-->C:\VitalForge\companion\src\main\AndroidManifest.xml:7:5-73
+14-->C:\VitalForge\companion\src\main\AndroidManifest.xml:7:22-70
+15    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+15-->C:\VitalForge\companion\src\main\AndroidManifest.xml:8:5-79
+15-->C:\VitalForge\companion\src\main\AndroidManifest.xml:8:22-76
+16    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+16-->C:\VitalForge\companion\src\main\AndroidManifest.xml:9:5-81
+16-->C:\VitalForge\companion\src\main\AndroidManifest.xml:9:22-78
+17    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+17-->C:\VitalForge\companion\src\main\AndroidManifest.xml:10:5-77
+17-->C:\VitalForge\companion\src\main\AndroidManifest.xml:10:22-74
+18    <uses-permission
+18-->C:\VitalForge\companion\src\main\AndroidManifest.xml:11:5-12:38
+19        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+19-->C:\VitalForge\companion\src\main\AndroidManifest.xml:11:22-78
+20        android:maxSdkVersion="28" />
+20-->C:\VitalForge\companion\src\main\AndroidManifest.xml:12:9-35
+21    <uses-permission android:name="android.permission.INTERNET" />
+21-->C:\VitalForge\companion\src\main\AndroidManifest.xml:13:5-67
+21-->C:\VitalForge\companion\src\main\AndroidManifest.xml:13:22-64
+22
+23    <permission
+23-->[androidx.core:core:1.13.0] C:\Users\Reza\.gradle\caches\8.9\transforms\63fa86f165fd3898f99b75928d016729\transformed\core-1.13.0\AndroidManifest.xml:22:5-24:47
+24        android:name="com.vitalforge.companion.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+24-->[androidx.core:core:1.13.0] C:\Users\Reza\.gradle\caches\8.9\transforms\63fa86f165fd3898f99b75928d016729\transformed\core-1.13.0\AndroidManifest.xml:23:9-81
+25        android:protectionLevel="signature" />
+25-->[androidx.core:core:1.13.0] C:\Users\Reza\.gradle\caches\8.9\transforms\63fa86f165fd3898f99b75928d016729\transformed\core-1.13.0\AndroidManifest.xml:24:9-44
+26
+27    <uses-permission android:name="com.vitalforge.companion.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+27-->[androidx.core:core:1.13.0] C:\Users\Reza\.gradle\caches\8.9\transforms\63fa86f165fd3898f99b75928d016729\transformed\core-1.13.0\AndroidManifest.xml:26:5-97
+27-->[androidx.core:core:1.13.0] C:\Users\Reza\.gradle\caches\8.9\transforms\63fa86f165fd3898f99b75928d016729\transformed\core-1.13.0\AndroidManifest.xml:26:22-94
+28
+29    <application
+29-->C:\VitalForge\companion\src\main\AndroidManifest.xml:15:5-47:19
+30        android:name="com.vitalforge.companion.CompanionApplication"
+30-->C:\VitalForge\companion\src\main\AndroidManifest.xml:16:9-45
+31        android:allowBackup="true"
+31-->C:\VitalForge\companion\src\main\AndroidManifest.xml:19:9-35
+32        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+32-->[androidx.core:core:1.13.0] C:\Users\Reza\.gradle\caches\8.9\transforms\63fa86f165fd3898f99b75928d016729\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
+33        android:debuggable="true"
+34        android:extractNativeLibs="false"
+35        android:icon="@android:drawable/ic_dialog_info"
+35-->C:\VitalForge\companion\src\main\AndroidManifest.xml:17:9-56
+36        android:roundIcon="@android:drawable/ic_dialog_info"
+36-->C:\VitalForge\companion\src\main\AndroidManifest.xml:18:9-61
+37        android:supportsRtl="true"
+37-->C:\VitalForge\companion\src\main\AndroidManifest.xml:20:9-35
+38        android:theme="@android:style/Theme.Material.Light" >
+38-->C:\VitalForge\companion\src\main\AndroidManifest.xml:21:9-60
+39        <activity
+39-->C:\VitalForge\companion\src\main\AndroidManifest.xml:23:9-31:20
+40            android:name="com.vitalforge.companion.ui.MainActivity"
+40-->C:\VitalForge\companion\src\main\AndroidManifest.xml:24:13-44
+41            android:exported="true"
+41-->C:\VitalForge\companion\src\main\AndroidManifest.xml:25:13-36
+42            android:theme="@android:style/Theme.Material.Light.NoActionBar" >
+42-->C:\VitalForge\companion\src\main\AndroidManifest.xml:26:13-76
+43            <intent-filter>
+43-->C:\VitalForge\companion\src\main\AndroidManifest.xml:27:13-30:29
+44                <action android:name="android.intent.action.MAIN" />
+44-->C:\VitalForge\companion\src\main\AndroidManifest.xml:28:17-69
+44-->C:\VitalForge\companion\src\main\AndroidManifest.xml:28:25-66
+45
+46                <category android:name="android.intent.category.LAUNCHER" />
+46-->C:\VitalForge\companion\src\main\AndroidManifest.xml:29:17-77
+46-->C:\VitalForge\companion\src\main\AndroidManifest.xml:29:27-74
+47            </intent-filter>
+48        </activity>
+49
+50        <service
+50-->C:\VitalForge\companion\src\main\AndroidManifest.xml:33:9-37:74
+51            android:name="com.vitalforge.companion.ble.CompanionBleService"
+51-->C:\VitalForge\companion\src\main\AndroidManifest.xml:34:13-52
+52            android:exported="false"
+52-->C:\VitalForge\companion\src\main\AndroidManifest.xml:35:13-37
+53            android:foregroundServiceType="connectedDevice"
+53-->C:\VitalForge\companion\src\main\AndroidManifest.xml:36:13-60
+54            android:permission="android.permission.FOREGROUND_SERVICE" />
+54-->C:\VitalForge\companion\src\main\AndroidManifest.xml:37:13-71
+55
+56        <provider
+57            android:name="androidx.startup.InitializationProvider"
+57-->C:\VitalForge\companion\src\main\AndroidManifest.xml:40:13-67
+58            android:authorities="com.vitalforge.companion.androidx-startup"
+58-->C:\VitalForge\companion\src\main\AndroidManifest.xml:41:13-68
+59            android:exported="false" >
+59-->C:\VitalForge\companion\src\main\AndroidManifest.xml:42:13-37
+60            <meta-data
+60-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Reza\.gradle\caches\8.9\transforms\bd01b570dd0c43530d2eac1c3965ea18\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+61                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+61-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Reza\.gradle\caches\8.9\transforms\bd01b570dd0c43530d2eac1c3965ea18\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:30:17-75
+62                android:value="androidx.startup" />
+62-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Reza\.gradle\caches\8.9\transforms\bd01b570dd0c43530d2eac1c3965ea18\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:31:17-49
+63            <meta-data
+63-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Reza\.gradle\caches\8.9\transforms\f622f4c3a56d61240d743561d7da029b\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+64                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+64-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Reza\.gradle\caches\8.9\transforms\f622f4c3a56d61240d743561d7da029b\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+65                android:value="androidx.startup" />
+65-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Reza\.gradle\caches\8.9\transforms\f622f4c3a56d61240d743561d7da029b\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+66            <meta-data
+66-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Reza\.gradle\caches\8.9\transforms\ef33965230996731f244b7dfdf468b6d\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+67                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+67-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Reza\.gradle\caches\8.9\transforms\ef33965230996731f244b7dfdf468b6d\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+68                android:value="androidx.startup" />
+68-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Reza\.gradle\caches\8.9\transforms\ef33965230996731f244b7dfdf468b6d\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+69        </provider>
+70
+71        <meta-data
+71-->C:\VitalForge\companion\src\main\AndroidManifest.xml:44:9-46:36
+72            android:name="dagger.hilt.android.internal.disableAndroidSuperclassValidation"
+72-->C:\VitalForge\companion\src\main\AndroidManifest.xml:45:13-91
+73            android:value="true" />
+73-->C:\VitalForge\companion\src\main\AndroidManifest.xml:46:13-33
+74
+75        <activity
+75-->[androidx.compose.ui:ui-tooling-android:1.6.0] C:\Users\Reza\.gradle\caches\8.9\transforms\8dfb6e25daa320572fb2bc8899fecef3\transformed\jetified-ui-tooling-release\AndroidManifest.xml:23:9-25:39
+76            android:name="androidx.compose.ui.tooling.PreviewActivity"
+76-->[androidx.compose.ui:ui-tooling-android:1.6.0] C:\Users\Reza\.gradle\caches\8.9\transforms\8dfb6e25daa320572fb2bc8899fecef3\transformed\jetified-ui-tooling-release\AndroidManifest.xml:24:13-71
+77            android:exported="true" />
+77-->[androidx.compose.ui:ui-tooling-android:1.6.0] C:\Users\Reza\.gradle\caches\8.9\transforms\8dfb6e25daa320572fb2bc8899fecef3\transformed\jetified-ui-tooling-release\AndroidManifest.xml:25:13-36
+78
+79        <service
+79-->[androidx.room:room-runtime:2.6.1] C:\Users\Reza\.gradle\caches\8.9\transforms\81c437a31ea86b4102a6303f2e1c1529\transformed\room-runtime-2.6.1\AndroidManifest.xml:24:9-28:63
+80            android:name="androidx.room.MultiInstanceInvalidationService"
+80-->[androidx.room:room-runtime:2.6.1] C:\Users\Reza\.gradle\caches\8.9\transforms\81c437a31ea86b4102a6303f2e1c1529\transformed\room-runtime-2.6.1\AndroidManifest.xml:25:13-74
+81            android:directBootAware="true"
+81-->[androidx.room:room-runtime:2.6.1] C:\Users\Reza\.gradle\caches\8.9\transforms\81c437a31ea86b4102a6303f2e1c1529\transformed\room-runtime-2.6.1\AndroidManifest.xml:26:13-43
+82            android:exported="false" />
+82-->[androidx.room:room-runtime:2.6.1] C:\Users\Reza\.gradle\caches\8.9\transforms\81c437a31ea86b4102a6303f2e1c1529\transformed\room-runtime-2.6.1\AndroidManifest.xml:27:13-37
+83
+84        <receiver
+84-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Reza\.gradle\caches\8.9\transforms\ef33965230996731f244b7dfdf468b6d\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+85            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+85-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Reza\.gradle\caches\8.9\transforms\ef33965230996731f244b7dfdf468b6d\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+86            android:directBootAware="false"
+86-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Reza\.gradle\caches\8.9\transforms\ef33965230996731f244b7dfdf468b6d\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+87            android:enabled="true"
+87-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Reza\.gradle\caches\8.9\transforms\ef33965230996731f244b7dfdf468b6d\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+88            android:exported="true"
+88-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Reza\.gradle\caches\8.9\transforms\ef33965230996731f244b7dfdf468b6d\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+89            android:permission="android.permission.DUMP" >
+89-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Reza\.gradle\caches\8.9\transforms\ef33965230996731f244b7dfdf468b6d\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+90            <intent-filter>
+90-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Reza\.gradle\caches\8.9\transforms\ef33965230996731f244b7dfdf468b6d\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+91                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+91-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Reza\.gradle\caches\8.9\transforms\ef33965230996731f244b7dfdf468b6d\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+91-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Reza\.gradle\caches\8.9\transforms\ef33965230996731f244b7dfdf468b6d\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+92            </intent-filter>
+93            <intent-filter>
+93-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Reza\.gradle\caches\8.9\transforms\ef33965230996731f244b7dfdf468b6d\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+94                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+94-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Reza\.gradle\caches\8.9\transforms\ef33965230996731f244b7dfdf468b6d\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+94-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Reza\.gradle\caches\8.9\transforms\ef33965230996731f244b7dfdf468b6d\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+95            </intent-filter>
+96            <intent-filter>
+96-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Reza\.gradle\caches\8.9\transforms\ef33965230996731f244b7dfdf468b6d\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+97                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+97-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Reza\.gradle\caches\8.9\transforms\ef33965230996731f244b7dfdf468b6d\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+97-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Reza\.gradle\caches\8.9\transforms\ef33965230996731f244b7dfdf468b6d\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+98            </intent-filter>
+99            <intent-filter>
+99-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Reza\.gradle\caches\8.9\transforms\ef33965230996731f244b7dfdf468b6d\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+100                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+100-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Reza\.gradle\caches\8.9\transforms\ef33965230996731f244b7dfdf468b6d\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+100-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Reza\.gradle\caches\8.9\transforms\ef33965230996731f244b7dfdf468b6d\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+101            </intent-filter>
+102        </receiver>
+103    </application>
+104
+105</manifest>

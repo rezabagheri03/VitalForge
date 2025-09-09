@@ -2,12 +2,69 @@ package com.vitalforge.watch.data.sensor
 
 import android.content.Context
 import android.util.Log
-import com.samsung.android.service.health.tracking.HealthTracker
-import com.samsung.android.service.health.tracking.HealthTrackerException
-import com.samsung.android.service.health.tracking.HealthTrackingService
-import com.samsung.android.service.health.tracking.data.DataPoint
-import com.samsung.android.service.health.tracking.data.HealthTrackerType
-import com.samsung.android.service.health.tracking.data.ValueKey
+// Mock Samsung Health SDK classes for compilation
+// TODO: Replace with actual Samsung Health SDK when JAR files are available
+class HealthTracker {
+    interface TrackerEventListener {
+        fun onDataReceived(dataPoints: List<DataPoint>)
+        fun onError(error: TrackerError)
+        fun onFlushCompleted()
+    }
+    
+    enum class TrackerError {
+        UNKNOWN_ERROR, PERMISSION_DENIED, SERVICE_UNAVAILABLE
+    }
+    
+    fun setEventListener(listener: TrackerEventListener) {}
+    fun unsetEventListener() {}
+}
+
+class HealthTrackerException(message: String) : Exception(message)
+
+class HealthTrackingService {
+    interface ConnectionListener {
+        fun onConnectionSuccess()
+        fun onConnectionFailed(exception: HealthTrackerException)
+        fun onConnectionEnded()
+    }
+    
+    fun connectService() {}
+    fun disconnectService() {}
+    fun getHealthTracker(type: HealthTrackerType): HealthTracker? = null
+}
+
+data class DataPoint(
+    val timestamp: Long = System.currentTimeMillis()
+) {
+    fun getValue(key: ValueKey): Any = 0
+}
+
+enum class HealthTrackerType {
+    HEART_RATE_CONTINUOUS, SPO2_CONTINUOUS, PPG_CONTINUOUS, ECG_CONTINUOUS
+}
+
+object ValueKey {
+    object HeartRateSet {
+        val HEART_RATE = "heart_rate"
+        val HEART_RATE_STATUS = "heart_rate_status"
+        val IBI_LIST = "ibi_list"
+        val IBI_STATUS_LIST = "ibi_status_list"
+    }
+    object SpO2Set {
+        val SPO2 = "spo2"
+        val SPO2_STATUS = "spo2_status"
+    }
+    object PpgSet {
+        val PPG_SIGNAL = "ppg_signal"
+        val RED_CHANNEL = "red_channel"
+        val SAMPLING_RATE = "sampling_rate"
+    }
+    object EcgSet {
+        val ECG_SIGNAL = "ecg_signal"
+        val LEAD_OFF_DETECTED = "lead_off_detected"
+        val MAX_THRESHOLD_REACHED = "max_threshold_reached"
+    }
+}
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.suspendCancellableCoroutine

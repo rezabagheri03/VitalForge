@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- Application-level metadata -->
-    <uses-sdk android:minSdkVersion="26" android:targetSdkVersion="34" />
+    <uses-sdk android:minSdkVersion="30" android:targetSdkVersion="34" />
 
-    <!-- Permissions for sensors, BLE, and export -->
     <uses-permission android:name="android.permission.BODY_SENSORS" />
     <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
@@ -20,42 +17,36 @@
 
     <application
         android:name=".WatchApplication"
-        android:icon="@mipmap/ic_launcher"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:icon="@android:drawable/ic_dialog_info"
+        android:roundIcon="@android:drawable/ic_dialog_info"
         android:allowBackup="true"
         android:supportsRtl="true"
-        android:theme="@style/Theme.VitalForge.Watch"
-        tools:targetApi="34">
+        android:theme="@android:style/Theme.Material.Light">
 
-        <!-- Health Platform API key -->
         <meta-data
             android:name="com.google.android.health.API_KEY"
             android:value="${HEALTH_PLATFORM_API_KEY}" />
 
-        <!-- Main Watch Activity -->
         <activity
             android:name=".ui.MainWearActivity"
             android:exported="true"
-            android:theme="@style/Theme.VitalForge.Watch.NoActionBar">
+            android:theme="@android:style/Theme.Material.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="com.google.android.wearable.action.WEARABLE_APPLICATION" />
             </intent-filter>
         </activity>
 
-        <!-- BLE GATT Server Service -->
         <service
             android:name=".ble.WearBleService"
             android:exported="false"
             android:permission="android.permission.BLUETOOTH" />
 
-        <!-- Background data processing via WorkManager -->
         <provider
             android:name="androidx.work.impl.WorkManagerInitializer"
             android:authorities="${applicationId}.workmanager-init"
             android:exported="false" />
 
-        <!-- Hilt injection entrypoint -->
         <meta-data
             android:name="dagger.hilt.android.internal.disableAndroidSuperclassValidation"
             android:value="true" />

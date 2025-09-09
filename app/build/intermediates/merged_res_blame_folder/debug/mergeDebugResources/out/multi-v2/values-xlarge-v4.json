@@ -4,7 +4,7 @@
             "outputFile": "com.vitalforge.watch.app-mergeDebugResources-63:/values-xlarge-v4/values-xlarge-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Reza\\.gradle\\caches\\8.9\\transforms\\b516afce8c74d8fd0ff07cd1b13805b9\\transformed\\appcompat-1.7.0\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
+                    "source": "C:\\Users\\Reza\\.gradle\\caches\\8.9\\transforms\\5ff7426a89ff33176352b2f9e703adec\\transformed\\appcompat-1.7.0\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7",
                         "startColumns": "4,4,4,4,4,4",

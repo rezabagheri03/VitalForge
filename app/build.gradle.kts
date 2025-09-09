@@ -4,8 +4,8 @@ import java.io.FileInputStream
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("com.google.dagger.hilt.android")
     kotlin("kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -14,13 +14,12 @@ android {
 
     defaultConfig {
         applicationId = "com.vitalforge.watch"
-        minSdk = 26
+        minSdk = 30
         targetSdk = 34
         versionCode = 1
         versionName = "1.0.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
-        // Inject API key from local.properties into the manifest
         manifestPlaceholders["HEALTH_PLATFORM_API_KEY"] = run {
             val propsFile = rootProject.file("local.properties")
             if (propsFile.exists()) {
@@ -60,7 +59,6 @@ android {
 
     packaging {
         resources {
-            // Exclude META-INF files to avoid duplicate entry errors
             excludes += setOf(
                 "META-INF/DEPENDENCIES",
                 "META-INF/LICENSE",
